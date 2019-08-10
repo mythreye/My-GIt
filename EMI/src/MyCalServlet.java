@@ -56,6 +56,7 @@ public class MyCalServlet extends HttpServlet {
 			p = p - EmiCalc.calcPrincipal(p, n);
 			n = n - 1;
 			a.add(new Disp(p, i, p + i));
+			System.out.print(p+i);
 		}
 		RequestDispatcher rd=request.getRequestDispatcher("details.jsp");
 		request.setAttribute("detail", a);
